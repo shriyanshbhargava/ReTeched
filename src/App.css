@@ -1,3 +1,9 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300&family=Montserrat:ital,wght@0,300;0,700;0,800;0,900;1,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Crimson+Text&family=Inter:wght@300&family=Montserrat:ital,wght@0,300;0,700;0,800;0,900;1,800&display=swap");
+
 .App {
   text-align: center;
 }
@@ -5,6 +11,95 @@
 .App-logo {
   height: 40vmin;
   pointer-events: none;
+}
+
+.midSection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* margin-top: 0rem; */
+}
+
+.midSectionCarousel {
+  margin-top: 1rem;
+  width: 1000px;
+  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+.logoGrid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+}
+
+.logoGrid img {
+  margin: 15px;
+  height: 25px;
+}
+
+.logoGridDiv {
+  display: flex;
+}
+
+.pencilImage {
+  height: 200px;
+  position: absolute;
+  padding-left: 495px;
+  top: 110.3rem;
+}
+
+.quoteText {
+  font-family: "Crimson Text", serif;
+  color: black;
+  font-size: 30px;
+  font-weight: 400;
+  margin-top: 70px;
+}
+
+.nameDiv {
+  text-align: left;
+  font-size: 13px;
+  letter-spacing: 0.5px;
+  padding: 2px;
+  margin-left: 5px;
+  color: black;
+  font-weight: 500;
+}
+
+.quantDataDiv {
+  display: flex;
+  text-align: left;
+  justify-content: space-between;
+  width: 70%;
+}
+
+.midContainerParentDiv {
+  display: flex;
+  justify-content: center;
+  width: 70%;
+}
+
+.midContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  padding: 30px;
+  margin: 20px;
+}
+
+.midLastContainer {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  width: 100px;
+}
+
+.midLastCarousel {
+  width: 70%;
+  height: 100vh;
 }
 
 @media (prefers-reduced-motion: no-preference) {
