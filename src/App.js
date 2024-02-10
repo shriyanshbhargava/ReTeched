@@ -4,6 +4,7 @@ import { Home } from "./Pages/Home";
 import Footer from "./Components/Footer/Footer";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import { Locate } from "./Pages/Locate";
+import { AboutUs } from "./Pages/AboutUs";
 
 function App() {
   return (
@@ -11,11 +12,12 @@ function App() {
       <Router>
         <Routes>
           <Route path="/" exact element={<Home />} />
-          <Route path="/locate" component={<Locate />} />
-          {/* Add more routes as needed */}
+          <Route path="/Locate" component={<Locate />} />
+          <Route path="/AboutUs" component={<AboutUs />} />
+
         </Routes>
         <Header />
-        <Home />
+
         <Footer />
       </Router>
     </div>

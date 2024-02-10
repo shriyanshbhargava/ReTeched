@@ -1,8 +1,47 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import "./Header.css";
-import { Link } from 'react-router-dom';
+import { Link } from "react-router-dom";
+import Scroll from "react-scroll-to-element";
+
+import axios from "axios";
 
 export default function Header() {
+  const [location, setLocation] = useState(null);
+  const [city, setCity] = useState(null);
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        async (position) => {
+          setLocation({
+            latitude: position.coords.latitude,
+            longitude: position.coords.longitude,
+          });
+
+          // Use Nominatim API to get city name
+          try {
+            const response = await axios.get(
+              `https://nominatim.openstreetmap.org/reverse?format=json&lat=${position.coords.latitude}&lon=${position.coords.longitude}`
+            );
+
+            if (response.data.address.city) {
+              setCity(response.data.address.city);
+            } else {
+              console.error("City not found in response.");
+            }
+          } catch (error) {
+            console.error("Error fetching city:", error);
+          }
+        },
+        (error) => {
+          console.error("Error getting location:", error);
+        }
+      );
+    } else {
+      console.error("Geolocation is not supported by this browser.");
+    }
+  }, []);
+
   return (
     <div>
       <header>
@@ -52,19 +91,43 @@ export default function Header() {
             <div className="text-black flex ml-3">
               {" "}
               <div className="px-2 select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                <a href="">Home</a>
+                <Link href="/">
+                  {" "}
+                  <Scroll type="id" element="section-1" offset={-200}>
+                    Home
+                  </Scroll>
+                </Link>
               </div>
               <div className="px-2 select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                <a href="">Why Choose Us?</a>
+                <Link to="/">
+                  <Scroll type="id" element="section-3" offset={-200}>
+                    Why Us
+                  </Scroll>
+                </Link>
               </div>
               <div className="px-2 select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                <a href="">How It Works</a>
+                <Link to="/">
+                  {" "}
+                  <Scroll type="id" element="section-2" offset={-200}>
+                    How It Works
+                  </Scroll>
+                </Link>
               </div>
               <div className="px-2 select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75  disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                <a href="../../Pages/Locate.js">Locate Nearby Centers</a>
+                <Link to="/">
+                  {" "}
+                  <Scroll type="id" element="section-4" offset={-200}>
+                    Nearby Centers
+                  </Scroll>
+                </Link>
               </div>
               <div className="px-2 select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75  disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                <a href="">Contact Us</a>
+                <Link to="/Contact Us">
+                  {" "}
+                  <Scroll type="id" element="section-5" offset={-200}>
+                    Contact Us
+                  </Scroll>
+                </Link>
               </div>
             </div>
             <span className="text-black pl-4 pr-4">|</span>
@@ -84,7 +147,16 @@ export default function Header() {
                   type="button"
                   class="text-white bg-black hover:bg-gray-800 focus:ring-4 focus:outline-none focus:ring-primary-300 font-medium rounded-lg text-sm px-4 py-2 text-center dark:bg-primary-600 dark:hover:bg-primary-700 dark:focus:ring-blue-800"
                 >
-                  Join Us
+                  {location ? (
+                    <div>
+                      📍 Gandhinagar
+                      {/* <p>City: {city || "Loading city..."}</p> */}
+                      {/* <p>Latitude: {location.latitude}</p>
+                      <p>Longitude: {location.longitude}</p> */}
+                    </div>
+                  ) : (
+                    <p>Loading location...</p>
+                  )}
                 </button>
               </div>
             </div>
