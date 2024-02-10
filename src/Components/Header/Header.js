@@ -1,6 +1,6 @@
 import React from "react";
 import "./Header.css";
-import { Link } from 'react-router-dom';
+// import { Link } from "react-router-dom";
 
 export default function Header() {
   return (
@@ -52,19 +52,19 @@ export default function Header() {
             <div className="text-black flex ml-3">
               {" "}
               <div className="px-2 select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                <Link href="">Home</Link>
+                <a href="">Home</a>
               </div>
               <div className="px-2 select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                <Link href="">Why Choose Us?</Link>
+                <a href="">Why Choose Us?</a>
               </div>
               <div className="px-2 select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75 focus:ring focus:ring-gray-300 active:opacity-[0.85] disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                <Link href="">How It Works</Link>
+                <a href="">How It Works</a>
               </div>
               <div className="px-2 select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75  disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                <Link href="../../Pages/Locate.js">Locate Nearby Centers</Link>
+                <a href="../../Pages/Locate.js">Locate Nearby Centers</a>
               </div>
               <div className="px-2 select-none rounded-lg  py-3 px-6 text-center align-middle font-sans text-xs font-bold uppercase text-gray-900 transition-all hover:opacity-75  disabled:pointer-events-none disabled:opacity-50 disabled:shadow-none">
-                <Link href="">Contact Us</Link>
+                <a href="">Contact Us</a>
               </div>
             </div>
             <span className="text-black pl-4 pr-4">|</span>
