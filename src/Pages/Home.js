@@ -21,8 +21,10 @@ export const Home = () => {
         id="section-1"
         className="text-center text-black mt-32 text-6xl font-bold font-Inter tracking-tight "
       >
-        Revitalize. Reuse. Recycle.
-        <h5 className="text-2xl font-semibold tracking-normal mt-5  ">
+        <span className="animate__animated animate__fadeInUp">
+          Revitalize. Reuse. Recycle.
+        </span>
+        <h5 className="text-2xl font-semibold tracking-normal mt-5  animate__animated animate__fadeInUp">
           ReTech.ed is Where Sustainability Meets Innovation for a Greener
           Tomorrow.
         </h5>
@@ -36,21 +38,22 @@ export const Home = () => {
           </div>
 
           <h5
-            className="text-5xl p-2 font-semibold tracking-normal mt-5 "
-            id="section-2"
+            className="text-5xl p-2 font-semibold tracking-normal mt-5 animate__animated animate__fadeInUp"
+            id="section-2" 
           >
             How It Works.
           </h5>
           <div className="midSectionCarousel">
             <img
               alt="no data found"
+              className="animate__animated animate__fadeInUp"
               src="https://i.postimg.cc/wTHpcbZv/final.png"
               style={{ width: "1800px" }}
             />
           </div>
           <h5
             id="section-3"
-            className="text-5xl p-5 font-semibold tracking-normal mt-5"
+            className="text-5xl p-5 font-semibold tracking-normal mt-5 "
           >
             Why Us?
           </h5>

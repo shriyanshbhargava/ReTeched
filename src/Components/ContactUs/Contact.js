@@ -32,42 +32,63 @@ const ContactForm = () => {
 
   return (
     <div>
-      <h1>Contact Us</h1>
-      <form onSubmit={handleSubmit}>
-        <label htmlFor="name">Name:</label>
-        <input
-          type="text"
-          id="name"
-          name="name"
-          value={formData.name}
-          onChange={handleChange}
-          required
-        />
-        <br />
-
-        <label htmlFor="email">Email:</label>
-        <input
-          type="email"
-          id="email"
-          name="email"
-          value={formData.email}
-          onChange={handleChange}
-          required
-        />
-        <br />
-
-        <label htmlFor="message">Message:</label>
-        <textarea
-          id="message"
-          name="message"
-          value={formData.message}
-          onChange={handleChange}
-          required
-        ></textarea>
-        <br />
-
-        <input type="submit" value="Submit" />
-      </form>
+      <div class="bg-gray-900 h-screen flex flex-col items-center justify-center text-center">
+        <div class="text-white">
+          <h1 class="text-4xl font-bold">Domain For Sale Template</h1>
+          <p class="mt-4 text-lg">
+            Interested in purchasing mydomain.com ? Contact us!
+          </p>
+        </div>
+        <div class="mt-8">
+          <form
+            action="https://fabform.io/f/xxxxx"
+            method="post"
+            class="flex flex-col items-center"
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Full Name"
+              class="py-2 px-4 bg-gray-800 text-white rounded-md focus:outline-none mb-4"
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email Address"
+              class="py-2 px-4 bg-gray-800 text-white rounded-md focus:outline-none mb-4"
+              required
+            />
+            <textarea
+              name="message"
+              placeholder="Your Message"
+              rows="4"
+              class="py-2 px-4 bg-gray-800 text-white rounded-md focus:outline-none mb-4 resize-none w-full"
+              required
+            ></textarea>
+            <button
+              type="submit"
+              class="bg-blue-500 py-2 px-4 text-white rounded-md hover:bg-blue-600 focus:outline-none"
+            >
+              Send
+            </button>
+          </form>
+          <p class="mt-2 text-gray-400 text-sm">
+            We'll get back to you as soon as possible!
+          </p>
+          <div class="mt-4 text-gray-500 text-sm">
+            Powered by{" "}
+            <a
+              href="https://fabform.io"
+              class="underline"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              FabForm.io
+            </a>
+          </div>
+        </div>
+      </div>
     </div>
   );
 };
