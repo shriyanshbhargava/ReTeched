@@ -1,4 +1,4 @@
-<h1>ReTech.ed</h1>
+<h1>ReTeched</h1>
 <h2>Our Platform will give you the near E-Waste centers in your around area!</h2> 
 
 ![Screenshot 1](https://github.com/shriyanshbhargava/ReTeched/assets/75424375/fbf0408f-d09f-4724-8c9d-81bbf6bacb91)

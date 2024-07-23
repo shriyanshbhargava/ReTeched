@@ -25,7 +25,7 @@ export const Home = () => {
           Revitalize. Reuse. Recycle.
         </span>
         <h5 className="text-2xl font-semibold tracking-normal mt-5  animate__animated animate__fadeInUp">
-          ReTech.ed is Where Sustainability Meets Innovation for a Greener
+          ReTeched is Where Sustainability Meets Innovation for a Greener
           Tomorrow.
         </h5>
         <div className="midSection">

@@ -57,7 +57,7 @@ export default function Header() {
                 alt=" Logo"
               />
               <span class="flex-row text-lg tracking-tight font-semibold whitespace-nowrap dark:text-black">
-                ReTech.ed
+                ReTeched
               </span>
             </a>
 
@@ -149,7 +149,7 @@ export default function Header() {
                 >
                   {location ? (
                     <div>
-                      📍 Gandhinagar
+                      📍Indore
                       {/* <p>City: {city || "Loading city..."}</p> */}
                       {/* <p>Latitude: {location.latitude}</p>
                       <p>Longitude: {location.longitude}</p> */}

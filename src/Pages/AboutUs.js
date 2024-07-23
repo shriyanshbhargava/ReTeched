@@ -6,7 +6,7 @@ export const AboutUs = () => {
       <section class="mission">
         <h2>Our Pioneering Vision</h2>
         <p>
-          ReTech.ed imagines a world where e-waste is not just a problem but an
+          ReTeched imagines a world where e-waste is not just a problem but an
           opportunity. Through groundbreaking technology and unwavering
           dedication to sustainability, we're committed to reshaping the
           narrative surrounding electronic waste.
@@ -14,7 +14,7 @@ export const AboutUs = () => {
       </section>
 
       <section class="how-it-works">
-        <h2>How ReTech.ed Works</h2>
+        <h2>How ReTeched Works</h2>
         <p>
           Harnessing the latest advancements in machine learning, EnviroSwap
           accurately assesses the value and environmental impact of your

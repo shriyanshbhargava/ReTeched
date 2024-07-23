@@ -16,7 +16,7 @@ const Footer = () => {
                 alt="Logo"
               />
               <span class="self-center text-2xl font-semibold whitespace-nowrap dark:text-black">
-                ReTech.ed
+                ReTeched
               </span>
             </a>
             <ul class="flex flex-wrap items-center mb-6 text-sm font-medium text-black sm:mb-0 dark:text-gray-400">
@@ -44,11 +44,11 @@ const Footer = () => {
           </div>
           <hr class="my-6 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-8" />
           <span class="block text-sm text-gray-500 sm:text-center dark:text-gray-400">
-            © 2023{" "}
+            © 2024{" "}
             <a href="https://flowbite.com/" class="hover:underline">
-              ReTech.ed
+              ReTeched
             </a>
-            . All Rights Reserved.
+            .All Rights Reserved.
           </span>
         </div>
       </footer>
